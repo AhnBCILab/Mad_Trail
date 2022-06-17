@@ -1,0 +1,202 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3089324688903762639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3089324688903762633}
+  - component: {fileID: 3089324688903762632}
+  - component: {fileID: 3089324688903762634}
+  m_Layer: 0
+  m_Name: DollyTrack1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3089324688903762633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3089324688903762639}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 9.51, y: 0.026, z: -1.47}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &3089324688903762632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3089324688903762639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a200b19ca1a9685429ed7e043c28e904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Resolution: 1
+  m_Appearance:
+    pathColor: {r: 0, g: 1, b: 0, a: 1}
+    inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    width: 0.79
+  m_Looped: 0
+  m_Waypoints:
+  - position: {x: -0.16835783, y: -3, z: -65}
+    roll: 0
+  - position: {x: -0.15305234, y: -2.9464836, z: -57.251766}
+    roll: 0
+  - position: {x: -0.1491391, y: -3.14789, z: -52.619728}
+    roll: 0
+  - position: {x: -0.15305184, y: 0.1269153, z: -40.969696}
+    roll: 0
+  - position: {x: -0.12600577, y: 0.20576015, z: -33.09111}
+    roll: 0
+  - position: {x: -0.16599496, y: 0.2083104, z: -13.796814}
+    roll: 0
+  - position: {x: -0.15627728, y: 0.08068087, z: 15.000014}
+    roll: 0
+  - position: {x: -0.104184315, y: 0.07175239, z: 35.544056}
+    roll: 0
+  - position: {x: -0.15893655, y: -1.29282, z: 41.4437}
+    roll: 0
+  - position: {x: -0.18333316, y: -3.77444, z: 44.873306}
+    roll: 0
+  - position: {x: -0.24085495, y: -4.24388, z: 46.087166}
+    roll: 0
+  - position: {x: -2.6595132, y: -4.5150065, z: 48.439514}
+    roll: 0
+  - position: {x: -4.3671, y: -4.4361906, z: 48.86942}
+    roll: 0
+  - position: {x: -5.411361, y: -4.430605, z: 48.845703}
+    roll: 0
+  - position: {x: -6.353612, y: -4.4360013, z: 48.451443}
+    roll: 0
+  - position: {x: -7.3346405, y: -4.441838, z: 47.971516}
+    roll: 0
+  - position: {x: -9.409036, y: -4.4428935, z: 46.902966}
+    roll: 0
+  - position: {x: -11.8508005, y: -4.443692, z: 45.667675}
+    roll: 0
+  - position: {x: -14.498276, y: -4.4445047, z: 44.32917}
+    roll: 0
+  - position: {x: -18.051609, y: -4.4498153, z: 42.501743}
+    roll: 0
+  - position: {x: -27.38175, y: -4.4763937, z: 37.514317}
+    roll: 0
+  - position: {x: -29.248335, y: -4.4904313, z: 35.946404}
+    roll: 0
+  - position: {x: -30.119038, y: -4.502972, z: 34.520115}
+    roll: 0
+  - position: {x: -30.306124, y: -4.5295506, z: 32.80905}
+    roll: 0
+  - position: {x: -30.06846, y: -4.556129, z: 31.475698}
+    roll: 0
+  - position: {x: -29.433311, y: -4.6163683, z: 30.263042}
+    roll: 0
+  - position: {x: -28.804531, y: -5.811906, z: 29.43008}
+    roll: 0
+  - position: {x: -28.019585, y: -7.5091953, z: 28.470942}
+    roll: 0
+  - position: {x: -26.723063, y: -10.524468, z: 26.952341}
+    roll: 0
+  - position: {x: -25.91834, y: -12.357705, z: 26.013977}
+    roll: 0
+  - position: {x: -23.716389, y: -13.740792, z: 24.021263}
+    roll: 0
+  - position: {x: -20.292004, y: -14.252135, z: 20.793179}
+    roll: 0
+  - position: {x: -19.294481, y: -14.180338, z: 17.756283}
+    roll: 0
+  - position: {x: -19.667803, y: -14.195208, z: 15.980275}
+    roll: 0
+  - position: {x: -20.38967, y: -14.2, z: 14.759841}
+    roll: 0
+  - position: {x: -22.191597, y: -14.2, z: 13.031581}
+    roll: 0
+  - position: {x: -23.993525, y: -14.2, z: 11.303321}
+    roll: 0
+  - position: {x: -25.848885, y: -14.2, z: 9.241304}
+    roll: 0
+  - position: {x: -27.901546, y: -14.2, z: 7.1048956}
+    roll: 0
+  - position: {x: -29.954208, y: -14.2, z: 4.9684873}
+    roll: 0
+  - position: {x: -32.00687, y: -14.2, z: 2.832078}
+    roll: 0
+  - position: {x: -34.059532, y: -14.2, z: 0.6956697}
+    roll: 0
+  - position: {x: -36.112194, y: -14.2, z: -1.4407396}
+    roll: 0
+  - position: {x: -38.164856, y: -14.2, z: -3.5771484}
+    roll: 0
+  - position: {x: -40.217518, y: -14.2, z: -5.7135572}
+    roll: 0
+  - position: {x: -42.27018, y: -14.2, z: -7.8499656}
+    roll: 0
+  - position: {x: -44.32284, y: -14.2, z: -9.986375}
+    roll: 0
+  - position: {x: -45.620247, y: -14.302914, z: -11.421743}
+    roll: 0
+  - position: {x: -47.386593, y: -15.033478, z: -12.604799}
+    roll: 0
+  - position: {x: -48.65587, y: -15.8189535, z: -13.022469}
+    roll: 0
+  - position: {x: -50.075363, y: -16.689875, z: -13.02483}
+    roll: 0
+  - position: {x: -51.031036, y: -17.37232, z: -12.455723}
+    roll: 0
+  - position: {x: -51.774883, y: -18.228289, z: -11.482706}
+    roll: 0
+  - position: {x: -52.455124, y: -18.26207, z: -10.489706}
+    roll: 0
+  - position: {x: -54.213097, y: -18.2, z: -7.889265}
+    roll: 0
+  - position: {x: -55.686245, y: -18.2, z: -5.817358}
+    roll: 0
+  - position: {x: -57.08288, y: -18.2, z: -3.767311}
+    roll: 0
+  - position: {x: -60.061962, y: -18.2, z: 0.46394616}
+    roll: 0
+  - position: {x: -61.54604, y: -18.2, z: 2.601435}
+    roll: 0
+  - position: {x: -64.428085, y: -18.2, z: 6.6403384}
+    roll: 0
+  - position: {x: -67.3028, y: -18.2, z: 10.77516}
+    roll: 0
+  - position: {x: -70.93308, y: -18.2, z: 15.982668}
+    roll: 0
+  - position: {x: -74.56336, y: -18.2, z: 21.190176}
+    roll: 0
+  - position: {x: -78.17301, y: -18.2, z: 26.449383}
+    roll: 0
+  - position: {x: -81.81973, y: -18.2, z: 31.69208}
+    roll: 0
+  - position: {x: -85.46645, y: -18.2, z: 36.934776}
+    roll: 0
+  - position: {x: -89.113174, y: -18.2, z: 42.177475}
+    roll: 0
+  - position: {x: -93.65507, y: -18.2, z: 48.659664}
+    roll: 0
+--- !u!114 &3089324688903762634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3089324688903762639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cebb2a6c9ea062469761463e6947a77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Path: {fileID: 3089324688903762632}
