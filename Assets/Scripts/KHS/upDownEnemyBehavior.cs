@@ -1,0 +1,137 @@
+using UnityEngine;
+using UnityEngine.AI;
+
+[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(Rigidbody))]
+
+public class upDownEnemyBehavior : MonoBehaviour
+{
+    public float attackDistance = 3f;               // ���� ���� ����
+    public float movementSpeed = 4f;                // �̵� �ӵ� ����
+    public int npcHP = 100;                       // npcHP ����
+    //How much damage will npc deal to the player
+    public int npcDamage;                     // npc�� ���ϴ� damage ����
+    public float attackRate = 2.617f;                 // attack �ӵ� ����
+    public Transform firePoint;                     // �߻� ���� ����
+    //public GameObject npcDeadPrefab;                // ���� �� ��� ����
+
+    public Transform playerTransform;
+    // [HideInInspector]   // Makes a variable not show up in the inspector but be serialized.
+    // public EnemySpawn_KHS es;   // Enemy Spawn Scipt
+    NavMeshAgent agent;         // AI �̿��� ���� agent
+    float nextAttackTime = 0;   // ���� �ð� ����
+    Rigidbody r;                // ���� ��Ģ ����
+
+    [SerializeField]
+    Animator enemyAnimator;
+    [SerializeField]
+    AudioSource AS;
+
+
+    // Start is called before the first frame update
+    void Start() { 
+        // AI ����
+        agent = GetComponent<NavMeshAgent>();               // AI ��� �߰�
+        agent.stoppingDistance = attackDistance;            // ���� �Ÿ� ����
+        agent.speed = movementSpeed;                        // Enemy Speed ����
+
+        // �⺻ �� ����
+        r = GetComponent<Rigidbody>();                      // Rigidbody �߰�
+        r.useGravity = false;                               // Gravity ���߿� �߰�
+        r.isKinematic = true;                               // Kinematic? ���߿� ����
+        npcDamage = 1;
+        attackRate = 2.617f;
+        nextAttackTime = 0.0f;
+
+        
+    }
+
+    void Awake()
+    {
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        /*
+        if (enemyAnimator.GetCurrentAnimatorStateInfo(1).IsName("Scream"))
+        {
+            // �Ҹ� ����
+            AS.PlayDelayed(0.2f);
+            Debug.Log("Scream");
+        }
+        */
+
+
+        Attack();
+
+        if (agent.remainingDistance - attackDistance < 0.01f)   // Enemy�� �Ÿ��� Target �Ÿ����� ���̰� attackDistance ���� ���� ��
+        {
+            if (Time.time >= nextAttackTime)                      // �ð� �����ؼ� ��� �������ش�.
+            {
+                nextAttackTime = Time.time + attackRate;        // ���� ���� �ð� ����
+
+                Attack();
+                EnemyAttack();
+
+            }
+        }
+
+
+        //Move towardst he player
+        agent.destination = playerTransform.position;
+        //Always look at player
+        transform.LookAt(new Vector3(playerTransform.transform.position.x, transform.position.y, playerTransform.position.z));
+        //Gradually reduce rigidbody velocity if the force was applied by the bullet
+        r.velocity *= 0.99f;
+    }
+
+    public void EnemyAttack()
+    {
+        //Attack
+        RaycastHit hit;                                 // RaycastHit���� Raycast ������ �Ѵ�.
+        if (Physics.Raycast(firePoint.position, firePoint.forward, out hit, attackDistance))
+        {
+            if (hit.transform.CompareTag("Player"))     // hit�� ������ ��ü�� Player�� ���Ѵ�. 
+            {
+                Debug.DrawLine(firePoint.position, firePoint.position + firePoint.forward * attackDistance, Color.cyan);
+
+                //IEntity player = hit.transform.GetComponent<IEntity>();
+                //player.ApplyDamage(npcDamage);          // Player�� �������� �������ش�.
+            }
+        }
+    }
+
+    public void Attack()
+    {
+        if (Vector3.Distance(transform.position, playerTransform.position) > 4.0f)
+        {
+            enemyAnimator.SetBool("isAttack", false);
+            enemyAnimator.SetBool("isRun", true);
+        }
+        else
+        {
+            enemyAnimator.SetBool("isAttack", true);
+            enemyAnimator.SetBool("isRun", false);
+        }
+    }
+
+    public void ApplyDamage(int points)
+    {
+        npcHP -= points;
+        if (npcHP <= 0)  // npCHP�� 0�� �Ǹ� �״´�.
+        {
+            agent.enabled = false;
+            enemyAnimator.SetBool("isDamage", true);
+            Destroy(gameObject, 2.0f);
+        }
+
+        else
+        {
+            enemyAnimator.SetBool("isDamage", false);
+        }
+
+        Debug.Log("Enemy's HP:" + npcHP);
+    }
+}
