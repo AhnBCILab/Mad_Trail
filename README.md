@@ -85,7 +85,214 @@
 
 <br>
 
-## 3. 기대효과
+## 3. 소스코드 설명
+
+<table>
+<tr>
+    <td><b> _2DVisualizer.cs </b></td>
+    <td>LooxidLink에서 제공한 SDK로 사용자의 뇌파를 시각화해서 표로 볼 수 있는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> canvas_show_off.cs </b></td>
+    <td>공포 캐릭터 ‘Doctor’의 연출과 행동을 제어하는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> EnemyController_KHS.cs </b></td>
+    <td>게임 내 디펜스 모드에서 AI를 통해 적 AI를 제어하는 스크립트이다. </td>
+</tr>
+<tr>
+    <td><b> EnemyController_KHS_2.cs </b></td>
+    <td>게임 내 디펜스 모드에서 AI를 통해 적2 AI를 제어하는 스크립트이다. </td>
+</tr>
+<tr>
+    <td><b> EnemyController_TopDown_KHS.cs </b></td>
+    <td>게임 내 디펜스 모드에서 AI를 통해 적3 AI를 제어하는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b>EnemySpawn_KHS.cs </b></td>
+    <td>게임 내 디펜스 모드에서 적 AI를 랜덤하게 생성하며 wave를 통해 난이도를 높일 수 있는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> GM_KHS.cs</b></td>
+    <td>본 게임의 시작화면에서 로딩화면으로 넘어갈 시 필요한 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> triggerManager_KHS.cs  </b></td>
+    <td>BioSemi와의 Serial Port 연결을 담당하는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> AxMove.cs </b></td>
+    <td> 공포 연출 시 등장하는 도끼 연출을 담당하는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> BalloonToPlayer.cs </b></td>
+    <td>플레이어를 향해 풍선이 움직이는 효과를 담당하는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> Item1SetTrigger.cs </b></td>
+    <td>공포 연출 시 풍선 대신 공포물로 연출을 보여주는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b>SkullMove.cs</b></td>
+    <td>공포 연출시 등장하는 해골 연출을 담당하는 스크립트이다</td>
+</tr>
+<tr>
+    <td><b> CameraController.cs </b></td>
+    <td>게임 내 디펜스 모드에서 적이 공격할 시에 스크린 화면이 붉게 변하는 연출을 담당하는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> CameraShake.cs </b></td>
+    <td>게임 내 디펜스 모드에서 적에게 공격을 받으면 카메라를 흔들어 공격받고 있는 모션을 연출하는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> DefenseController.cs </b></td>
+    <td>게임 내 디펜스 모드에서 적 연출과 적과 무기의 상호작용을 구현한 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> EndingArmBehaviour.cs </b></td>
+    <td>게임 내 점프 스퀘어 연출인 ‘사용자를 덮치는 손’을 보여주는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> EndingDoorSlam.cs </b></td>
+    <td>게임 내 연속적으로 되어있는 복도에서 문을 여닫는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> IEntity_S.cs </b></td>
+    <td>적과 관련된 ApplyDamage()를 가진 interface이다.</td>
+</tr>
+<tr>
+    <td><b> JumpScare.cs </b></td>
+    <td>게임 내 Jumpscare 연출을 담당한다. 좀비 얼굴, 거미, 도끼와 관련된 연출 보여주는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> JumpTrigger.cs </b></td>
+    <td>게임 내 해당 지점으로 왔을 때 Jumpscare를 연출하는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> LoadingSceneManager.cs </b></td>
+    <td>게임 다시시작을 할 때 슬라이더 표시 하는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> TeleportedPlayerBehaviour.cs </b></td>
+    <td>게임 내 순간이동하는 구간에서 플레이어의 움직임 Flow를 담당한다.</td>
+</tr>
+<tr>
+    <td><b> ZombieController.cs </b></td>
+    <td>게임 내 디펜스 모드에서 좀비의 행동과 연출을 구현한 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> BackgroundSoundController.cs </b></td>
+    <td>게임 내 배경 음악을 담당하는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> Board.cs </b></td>
+    <td>게임 종료 시 점수 확인 UI를 보여주는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> CalcScore.cs </b></td>
+    <td>점수를 계산하는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> EnemyAttackController.cs </b></td>
+    <td>사용자가 적을 피격할 수 있도록 하는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> HorrorLightController.cs </b></td>
+    <td>맵 내의 조명 시스템을 조정할 수 있는 스크립트이다. 조명의 색, 밝기 등을 조정할 수 있다.</td>
+</tr>
+<tr>
+    <td><b> horrorObjectController.cs </b></td>
+    <td>호러 객체를 active, inactive할 수 있는 스크립트이이다.</td>
+</tr>
+<tr>
+    <td><b> HotelDefenceTrigger.cs </b></td>
+    <td>플레이어가 호텔 디펜스 구간에 진입하면 디펜스가 시작되도록 하는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> GameManager.cs </b></td>
+    <td>게임의 전체적인 흐름을 관리하는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> ItemChangeController.cs </b></td>
+    <td>트리거가 작동했을 때 풍선 객체를 호러 객체로 바꾸는 스크립트이다.</td>
+</tr>
+<tr>
+    <td><b> ItemInfo.cs </b></td>
+    <td>풍선 객체의 정보를 저장하는 스크립트이다. </td>
+</tr>
+<tr>
+    <td><b> normalObjectController.cs </b></td>
+    <td>풍선 객체를 active, inactive할 수 있는 스크립트이이다. </td>
+</tr>
+<tr>
+    <td><b> PumpkinActiveController.cs </b></td>
+    <td>호텔에서 몬스터가 나타나고 피격시 사라지도록 하는 스크립트이다. </td>
+</tr>
+<tr>
+    <td><b> SetRank.cs </b></td>
+    <td>플레이어가 얻은 점수를 기반으로 랭킹을 결정하는 스크립트이다. </td>
+</tr>
+<tr>
+    <td><b> SetScore.cs </b></td>
+    <td>마지막 장면에서 랭킹 보드에 플레이어가 얻은 점수를 띄워주는스크립트이다. </td>
+</tr>
+<tr>
+    <td><b> CameraSwithcher.cs </b></td>
+    <td>게임 중 플레이어가 순간이동을 해서 추가적인 연출이 등장하는 부분이 있는데, 이때 플레이어를 기존의 위치에서 새로운 위치로 순간이동하는(기존의 카메라를 끄고 새로운 카메라를 켜는) 스크립트이다.
+ </td>
+</tr>
+<tr>
+    <td><b> DoorSlapRandomize.cs </b></td>
+    <td>게임 중 플레이어가 순간이동한 곳에서 플레이어를 둘러 싼 문들이 무작위로 여닫히는 구간에서 자연스러운 공포감을 조성하기 위해서 각 문마다 서로 다른 주기를 가지도록 세팅해주는 스크립트이다. </td>
+</tr>
+<tr>
+    <td><b> FPS.cs </b></td>
+    <td>게임 개발 중, VR장비가 없는 환경에서 게임을 디버깅하기 위해서 VR없이 마우스를 사용해서, 게임내 상호작용이 가능하도록 만들어진 스크립트이다. </td>
+</tr>
+<tr>
+    <td><b> GameFlowController.cs </b></td>
+    <td>순간이동 후 여러가지 연출이 순차적으로 사용자에게 나타나는데, 이러한 연출들의 제공을 제어하는 순간이동 내부에서의 GameManager역할을 하는 스크립틍이다. </td>
+</tr>
+<tr>
+    <td><b> Generator.cs </b></td>
+    <td>이 스크립트를 가지고 있는 객체를 중심으로 일정 범위 안에서 랜덤하게 과녁 객체를 만드는 스크립트이다. </td>
+</tr>
+<tr>
+    <td><b> Generator_Genrate.cs </b></td>
+    <td>과녁 생성 객체를 플레이어가 지나가는 경로를 인식해서 해당 경로를 기준으로 자동적으로 과녁 생성 객체를 배치하는 스크립트이다. </td>
+</tr>
+<tr>
+    <td><b> GrabChecker.cs </b></td>
+    <td>VR장비에서 플레이어가 Trigger버튼과 Grab버튼등 컨트롤러를 눌렀을때 해당 Input을 인식하고 이를 변수화 하는 스크립트이다.  </td>
+</tr>
+<tr>
+    <td><b> SpeedChanger.cs </b></td>
+    <td>본 게임에서 사용된 플레이어 이동 수단인 “Dolly Cart”의 이동속도를 조절 하는 스크립트이다. </td>
+</tr>
+<tr>
+    <td><b> SpeedGate.cs </b></td>
+    <td>“SpeedChanger”를 호출하는 상위 스크립트로, 플레이어가 Gate객체와의 충돌 여부와 충돌로부터의 시간경과를 인식하여, 플레이어의 속도를 체계적으로 관리하는 스크립트이다.
+ </td>
+</tr>
+<tr>
+    <td><b> TrackChanger.cs </b></td>
+    <td>게임 개발 도중 플레이어가 갈림길에서 다른 Track으로 경로를 바꿀수 있도록 만든 스크립트이다. </td>
+</tr>
+<tr>
+    <td><b> Train_Sound_Changer.cs </b></td>
+    <td>플레이어의 이동 속도에 따른 열차 소리와 소리를 주파수 분석을 하여 이를 컨트롤러에 진동으로 전달시키는 스크립트이다. </td>
+</tr>
+<tr>
+    <td><b> TutorialManager.cs </b></td>
+    <td>게임 시작 초기에 플레이어에게 튜토리얼을 진행할때 튜토리얼 진행상황을 확인하고, 이에 맞춰서 정보를 제공하는 스크립트이다. </td>
+</tr>
+<tr>
+    <td><b> VR_NonVR.cs </b></td>
+    <td>게임 개발 중, VR장비가 없는 환경에서 게임을 디버깅하기 위해서 게임 내 객체에서 선택시 자동적으로 설정이 VR에서 Non-VR로 전환되도록 작성한 스크립트이다. </td>
+</tr>
+</table>
+
+## 4. 기대효과
 
 - 게임에 대한 사용자의 몰입감을 높이며 맞춤형 공포 게임의 새로운 패러다임을 제시한다.
 
@@ -96,7 +303,7 @@
 - VR을 활용했기 때문에 피험자에게 영향을 줄 수 있는 외부 환경과 단절됨으로써 최적화된 환경에서 실험을 진행할 수 있다.
 <br>
 
-## 4. References
+## 5. References
 
 - BCI VR Horror Attraction: The Mad Trail (https://store.steampowered.com/app/1988810/BCI_VR_Horror_Attraction_The_Mad_Trail/)
 - Unity (https://unity.com/)
@@ -108,7 +315,7 @@
 
 <br>
 
-## 5. About us
+## 6. About us
 
 한동대학교 전산전자공학부
 
@@ -118,5 +325,5 @@
 
 <br>
 
-## 6. Contact
+## 7. Contact
 뇌파게임에 대해 궁금한 점이 있다면 21700404@handong.ac.kr로 연락주시기 바랍니다.
